@@ -9,3 +9,5 @@ def bubblesort(arr):
                 flag = 1
 
         if flag == 0: break
+
+    return arr
