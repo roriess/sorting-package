@@ -1,4 +1,6 @@
 def bubblesort(arr):
+    if arr is None: return None
+
     lenArr = len(arr)
 
     for i in range(1, lenArr):

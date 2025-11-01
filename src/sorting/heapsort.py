@@ -32,6 +32,8 @@ def siftDown(arr, i, upper):
 
 
 def heapsort(arr):
+    if arr is None: return None
+
     lenArr = len(arr)
 
     for i in range((lenArr - 2) // 2, -1, -1):
@@ -42,5 +44,3 @@ def heapsort(arr):
         siftDown(arr, 0, j)
 
     return arr
-
-

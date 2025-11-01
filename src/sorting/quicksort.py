@@ -1,4 +1,6 @@
 def quicksort(arr):
+    if arr is None: return None
+
     if len(arr) <= 1: return arr
 
     pivot = arr[len(arr) // 2]
