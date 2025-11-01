@@ -8,8 +8,3 @@ def quicksort(arr):
     right = [x for x in arr if x > pivot]
     
     return quicksort(left) + middle + quicksort(right)
-
-
-arr = [23, 24, 3456, 345, -1342536, 15, 213465276387, -34]
-arr = quicksort(arr)
-print(arr)
