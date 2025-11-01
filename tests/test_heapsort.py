@@ -1,5 +1,6 @@
 from src.sorting.heapsort import heapsort
 
+
 def testEmpty():
     assert heapsort([]) == []
 

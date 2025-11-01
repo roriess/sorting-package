@@ -1,5 +1,6 @@
 from src.sorting.bubblesort import bubblesort
 
+
 def testEmpty():
     assert bubblesort([]) == []
 
