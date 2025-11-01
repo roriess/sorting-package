@@ -40,14 +40,7 @@ def heapsort(arr):
     for j in range(lenArr - 1, 0, -1):
         swap(arr, 0, j)
         siftDown(arr, 0, j)
-    
+
     return arr
-
-
-arr = [234, 235, 24, 1, 674, -4, 6]
-print(arr)
-print(heapsort(arr))
-
-
 
 
