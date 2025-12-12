@@ -1,4 +1,4 @@
-def mergesort(arr):
+def merge_sort(arr):
     if len(arr) <= 1: 
         return arr
     
@@ -7,8 +7,8 @@ def mergesort(arr):
     first_part = arr[:mid]
     second_part = arr[mid:]
 
-    first_part = mergesort(first_part)
-    second_part = mergesort(second_part)
+    first_part = merge_sort(first_part)
+    second_part = merge_sort(second_part)
 
     return merge(first_part, second_part)
 

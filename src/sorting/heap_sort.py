@@ -31,7 +31,7 @@ def sift_down(arr, i, upper):
         else: break
 
 
-def heapsort(arr):
+def heap_sort(arr):
     if arr is None: 
         return None
     

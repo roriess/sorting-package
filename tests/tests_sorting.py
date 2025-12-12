@@ -1,13 +1,12 @@
-# tests/tests_sorting.py
 import sys
 import os
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 
-from src.sorting.bubblesort import bubblesort
-from src.sorting.heapsort import heapsort
-from src.sorting.mergesort import mergesort
-from src.sorting.quicksort import quicksort
+from src.sorting.bubble_sort import bubble_sort
+from src.sorting.heap_sort import heap_sort
+from src.sorting.merge_sort import merge_sort
+from src.sorting.quick_sort import quick_sort
 
 import pytest
 
@@ -26,7 +25,7 @@ import pytest
 
 @pytest.mark.parametrize(
     "algorithm",
-    [bubblesort, heapsort, mergesort, quicksort]
+    [bubble_sort, heap_sort, merge_sort, quick_sort]
 )
 
 

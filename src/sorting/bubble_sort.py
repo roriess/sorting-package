@@ -1,4 +1,4 @@
-def bubblesort(arr):
+def bubble_sort(arr):
     if arr is None: return None
 
     len_arr = len(arr)
