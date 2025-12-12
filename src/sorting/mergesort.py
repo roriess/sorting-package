@@ -12,6 +12,7 @@ def mergesort(arr):
 
     return merge(first_part, second_part)
 
+
 def merge(first, second):
     merged = []
     while first and second:
@@ -20,3 +21,4 @@ def merge(first, second):
         else:
             merged.append(first.pop(0))
     merged.extend(first or second)
+    return merged
