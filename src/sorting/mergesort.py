@@ -21,4 +21,5 @@ def merge(first, second):
         else:
             merged.append(first.pop(0))
     merged.extend(first or second)
+
     return merged

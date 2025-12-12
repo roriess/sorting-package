@@ -32,15 +32,17 @@ def sift_down(arr, i, upper):
 
 
 def heapsort(arr):
-    if arr is None: return None
-
+    if arr is None: 
+        return None
+    
+    res = arr
     len_arr = len(arr)
 
     for i in range((len_arr - 2) // 2, -1, -1):
-        sift_down(arr, i, len_arr)
+        sift_down(res, i, len_arr)
     
     for j in range(len_arr - 1, 0, -1):
-        swap(arr, 0, j)
-        sift_down(arr, 0, j)
+        swap(res, 0, j)
+        sift_down(res, 0, j)
 
-    return arr
+    return res
