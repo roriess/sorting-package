@@ -1,4 +1,4 @@
-def quicksort(arr):
+def quick_sort(arr):
     if arr is None: return None
 
     if len(arr) <= 1: return arr
@@ -9,4 +9,4 @@ def quicksort(arr):
     middle = [x for x in arr if x == pivot]
     right = [x for x in arr if x > pivot]
     
-    return quicksort(left) + middle + quicksort(right)
+    return quick_sort(left) + middle + quick_sort(right)
