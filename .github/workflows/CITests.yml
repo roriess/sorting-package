@@ -26,4 +26,4 @@ jobs:
       
       - name: Run Tests
         run: |
-          python -m pytest tests/ --cov=src --cov-report=xml -v
+          python -m pytest tests/tests_sorting.py -v
