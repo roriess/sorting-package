@@ -13,21 +13,21 @@ def test3():
    assert quicksort([10, -1, 8]) == [-1, 8, 10]
 
 
-def testEmpty():
+def test_empty():
     assert quicksort([]) == []
 
 
-def testOneElm():
+def test_one_elm():
     assert quicksort([1]) == [1]
 
 
-def testNegativeElm():
+def test_negative_elm():
     assert quicksort([-1, -2, -3]) == [-3, -2, -1]
 
 
-def testLargeElm():
+def test_large_elm():
     assert quicksort([1000000000, 2000000000]) == [1000000000, 2000000000]
 
 
-def testNone():
+def test_none():
     assert quicksort(None) is None

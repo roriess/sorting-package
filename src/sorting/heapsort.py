@@ -2,30 +2,30 @@ def swap(arr, i, j):
     arr[i], arr[j] = arr[j], arr[i]
 
 
-def siftDown(arr, i, upper):
+def sift_down(arr, i, upper):
     while True:
-        leftIndex = 2*i + 1
-        rightIndex = 2*i + 2
+        left_index = 2*i + 1
+        right_index = 2*i + 2
 
-        if max(leftIndex, rightIndex) < upper:
-            if arr[i] >= max(arr[leftIndex], arr[rightIndex]): break
-            elif arr[leftIndex] > arr[rightIndex]:
-                swap(arr, leftIndex, i)
-                i = leftIndex
+        if max(left_index, right_index) < upper:
+            if arr[i] >= max(arr[left_index], arr[right_index]): break
+            elif arr[left_index] > arr[right_index]:
+                swap(arr, left_index, i)
+                i = left_index
             else:
-                swap(arr, rightIndex, i)
-                i = rightIndex
+                swap(arr, right_index, i)
+                i = right_index
 
-        elif leftIndex < upper:
-            if arr[leftIndex] > arr[i]:
-                swap(arr, leftIndex, i)
-                i = leftIndex
+        elif left_index < upper:
+            if arr[left_index] > arr[i]:
+                swap(arr, left_index, i)
+                i = left_index
             else: break
 
-        elif rightIndex < upper:
-            if arr[rightIndex] > arr[i]:
-                swap(arr, rightIndex, i)
-                i = rightIndex
+        elif right_index < upper:
+            if arr[right_index] > arr[i]:
+                swap(arr, right_index, i)
+                i = right_index
             else: break
 
         else: break
@@ -34,13 +34,13 @@ def siftDown(arr, i, upper):
 def heapsort(arr):
     if arr is None: return None
 
-    lenArr = len(arr)
+    len_arr = len(arr)
 
-    for i in range((lenArr - 2) // 2, -1, -1):
-        siftDown(arr, i, lenArr)
+    for i in range((len_arr - 2) // 2, -1, -1):
+        sift_down(arr, i, len_arr)
     
-    for j in range(lenArr - 1, 0, -1):
+    for j in range(len_arr - 1, 0, -1):
         swap(arr, 0, j)
-        siftDown(arr, 0, j)
+        sift_down(arr, 0, j)
 
     return arr
